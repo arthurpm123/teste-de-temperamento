@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teste de Temperamento</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      padding: 20px;
+      line-height: 1.6;
+    }
+    h1, h2 {
+      text-align: center;
+    }
+    .question {
+      margin-bottom: 15px;
+    }
+    .results {
+      display: none;
+      text-align: center;
+      margin-top: 20px;
+    }
+    button {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <h1>Teste de Temperamento</h1>
+  <p>Responda as perguntas abaixo para descobrir seu temperamento predominante.</p>
+  <p><strong>Instruções:</strong> Use a escala de **1 a 5** para responder cada pergunta:</p>
+  <ul>
+    <li><strong>1:</strong> Discordo totalmente</li>
+    <li><strong>2:</strong> Discordo</li>
+    <li><strong>3:</strong> Neutro/Indiferente</li>
+    <li><strong>4:</strong> Concordo</li>
+    <li><strong>5:</strong> Concordo totalmente</li>
+  </ul>
+  <p>Escolha a opção que melhor descreve como você geralmente se sente ou age.</p>
+
+  <form id="temperamentForm">
+    <!-- Sanguíneo -->
+    <h2>Sanguíneo</h2>
+    <div class="question">
+      <label>1. Eu gosto de conhecer novas pessoas e me sinto à vontade em ambientes sociais.</label><br>
+      <input type="number" name="sanguine" min="1" max="5" required>
+    </div>
+    <div class="question">
+      <label>2. Sou frequentemente a pessoa mais animada em um grupo.</label><br>
+      <input type="number" name="sanguine" min="1" max="5" required>
+    </div>
+    <div class="question">
+      <label>3. Costumo agir por impulso, sem pensar muito antes.</label><br>
+      <input type="number" name="sanguine" min="1" max="5" required>
+    </div>
+    <div class="question">
+      <label>4. Gosto de ser o centro das atenções.</label><br>
+      <input type="number" name="sanguine" min="1" max="5" required>
+    </div>
+    <div class="question">
+      <label>5. Tenho dificuldade em manter rotinas e compromissos longos.</label><br>
+      <input type="number" name="sanguine" min="1" max="5" required>
+    </div>
+
+    <!-- Fleumático -->
+    <h2>Fleumático</h2>
+    <div class="question">
+      <label>1. Prefiro evitar conflitos e brigas, mesmo que isso signifique ceder.</label><br>
+      <input type="number" name="phlegmatic" min="1" max="5" required>
+    </div>
+    <div class="question">
+      <label>2. Eu sou uma pessoa reservada e levo tempo para confiar nas pessoas.</label><br>
+      <input type="number" name="phlegmatic" min="1" max="5" required>
+    </div>
+    <div class="question">
+      <label>3. Normalmente, sou consistente em minhas decisões e comportamentos.</label><br>
+      <input type="number" name="phlegmatic" min="1" max="5" required>
+    </div>
+    <div class="question">
+      <label>4. Valorizo mais a paz e estabilidade do que a emoção e a aventura.</label><br>
+      <input type="number" name="phlegmatic" min="1" max="5" required>
+    </div>
+    <div class="question">
+      <label>5. Geralmente, sou muito paciente com os outros.</label><br>
+      <input type="number" name="phlegmatic" min="1" max="5" required>
+    </div>
+
+    <!-- Colérico -->
+    <h2>Colérico</h2>
+    <div class="question">
+      <label>1. Quando vejo um problema, tomo a iniciativa de resolvê-lo imediatamente.</label><br>
+      <input type="number" name="choleric" min="1" max="5" required>
+    </div>
+    <div class="question">
+      <label>2. Sou competitivo e gosto de desafios.</label><br>
+      <input type="number" name="choleric" min="1" max="5" required>
+    </div>
+    <div class="question">
+      <label>3. Prefiro liderar projetos e grupos do que seguir ordens.</label><br>
+      <input type="number" name="choleric" min="1" max="5" required>
+    </div>
+    <div class="question">
+      <label>4. Tenho uma personalidade forte e não tenho medo de expressar minhas opiniões.</label><br>
+      <input type="number" name="choleric" min="1" max="5" required>
+    </div>
+    <div class="question">
+      <label>5. Sou motivado por resultados e fico frustrado com ineficiência.</label><br>
+      <input type="number" name="choleric" min="1" max="5" required>
+    </div>
+
+    <!-- Melancólico -->
+    <h2>Melancólico</h2>
+    <div class="question">
+      <label>1. Sou detalhista e valorizo muito a qualidade no que faço.</label><br>
+      <input type="number" name="melancholic" min="1" max="5" required>
+    </div>
+    <div class="question">
+      <label>2. Costumo pensar profundamente antes de tomar decisões.</label><br>
+      <input type="number" name="melancholic" min="1" max="5" required>
+    </div>
+    <div class="question">
+      <label>3. Eu me preocupo facilmente com o que pode dar errado.</label><br>
+      <input type="number" name="melancholic" min="1" max="5" required>
+    </div>
+    <div class="question">
+      <label>4. Prefiro atividades calmas e solitárias a ambientes agitados.</label><br>
+      <input type="number" name="melancholic" min="1" max="5" required>
+    </div>
+    <div class="question">
+      <label>5. Sou sensível às críticas e às emoções das outras pessoas.</label><br>
+      <input type="number" name="melancholic" min="1" max="5" required>
+    </div>
+
+    <button type="button" onclick="calculateTemperament()">Ver Resultado</button>
+  </form>
+
+  <div class="results" id="results">
+    <h2>Resultado</h2>
+    <p id="resultText"></p>
+    <p id="resultDetails"></p>
+  </div>
+
+  <script>
+    function calculateTemperament() {
+      const form = document.getElementById("temperamentForm");
+      const resultsDiv = document.getElementById("results");
+      const resultText = document.getElementById("resultText");
+      const resultDetails = document.getElementById("resultDetails");
+
+      const sanguine = Array.from(form.querySelectorAll('input[name="sanguine"]')).reduce((sum, input) => sum + parseInt(input.value || 0), 0);
+      const phlegmatic = Array.from(form.querySelectorAll('input[name="phlegmatic"]')).reduce((sum, input) => sum + parseInt(input.value || 0), 0);
+      const choleric = Array.from(form.querySelectorAll('input[name="choleric"]')).reduce((sum, input) => sum + parseInt(input.value || 0), 0);
+      const melancholic = Array.from(form.querySelectorAll('input[name="melancholic"]')).reduce((sum, input) => sum + parseInt(input.value || 0), 0);
+
+      const scores = { Sanguíneo: sanguine, Fleumático: phlegmatic, Colérico: choleric, Melancólico: melancholic };
+      const dominant = Object.keys(scores).reduce((a, b) => (scores[a] > scores[b] ? a : b));
+
+      const descriptions = {
+        Sanguíneo: "Pontos positivos: Entusiasta, sociável, otimista. Pontos negativos: Impulsivo, desorganizado. Sugestão: Use sua energia para liderar com empatia, mas aprenda a planejar melhor.",
+        Fleumático: "Pontos positivos: Calmo, paciente, confiável. Pontos negativos: Passivo, evita mudanças. Sugestão: Use sua paz para mediar conflitos, mas aprenda a se posicionar.",
+        Colérico: "Pontos positivos: Determinado, líder, resoluto. Pontos negativos: Impaciente, autoritário. Sugestão: Use sua determinação para motivar outros, mas trabalhe sua tolerância.",
+        Melancólico: "Pontos positivos: Detalhista, analítico, leal. Pontos negativos: Perfeccionista, pessimista. Sugestão: Valorize seus padrões elevados, mas aprenda a ser flexível."
+      };
+
+      resultsDiv.style.display = "block";
+      resultText.innerText = `Seu temperamento predominante é: ${dominant}`;
+      resultDetails.innerText = descriptions[dominant];
+    }
+  </script>
+</body>
+</html>
